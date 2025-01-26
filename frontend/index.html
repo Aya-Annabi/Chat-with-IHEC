@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Conteneur pour l'image de fond -->
+    <div id="background-container"></div>
+
+    <!-- Icône de messagerie -->
+    <div id="chat-icon" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Fenêtre de chat -->
+    <div id="chat-window">
+        <div id="chat-header">
+            <span>Chatbot FAQ</span>
+            <button id="close-chat" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="chat-body">
+            <div id="suggestions">
+                <p>Voici quelques questions fréquentes :</p>
+                <button onclick="askSuggestedQuestion('Quelle est la mission de notre établissement ?')">Quelle est la mission de notre établissement ?</button>
+                <button onclick="askSuggestedQuestion('Combien d\'étudiants sont inscrits cette année ?')">Combien d'étudiants sont inscrits cette année ?</button>
+            </div>
+            <div id="chat-messages"></div>
+        </div>
+        <div id="chat-input">
+            <input type="text" id="question" placeholder="Posez votre question...">
+            <button onclick="askQuestion()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
